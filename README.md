@@ -1,16 +1,62 @@
-# React + Vite
+# Agent Behavior Prototype
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An exploration of an agent behavior control system for defining, reviewing, and managing how an AI agent should behave.
 
-Currently, two official plugins are available:
+This prototype focuses on the idea that users should be able to describe the behavior they want in natural language, or choose from a library of reusable behaviors, and then manage those behaviors through a customer-facing admin experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What this prototype explores
 
-## React Compiler
+- A `Behaviour` management surface with:
+  - overall behaviour metrics
+  - a flat, scannable list of behaviours
+  - per-behaviour details and diagnostics
+- A behavior creation flow that lets users:
+  - describe what they want
+  - browse a behavior library
+  - refine the system translation before saving
+- A lower-fidelity wireframe mode and a more polished mode
+- A version switcher for comparing prototype directions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Current concepts in the prototype
 
-## Expanding the ESLint configuration
+- Natural-language behaviour authoring
+- Library-based behaviour discovery
+- Original ask vs. system translation
+- Behaviour diagnostics and testing
+- Customer-facing abstraction over internal behavior layers
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech stack
+
+- React
+- Vite
+- TypeScript
+- Tailwind CSS
+
+## Local development
+
+```bash
+cd "/Users/southisackjohnnykounlavout/Documents/prototypes/agent behavior"
+npm install
+npm run dev -- --host 0.0.0.0 --port 5173
+```
+
+Then open [http://localhost:5173/](http://localhost:5173/).
+
+## Theme and version switching
+
+The prototype includes:
+
+- `Wireframe` and `Polished` visual modes
+- `Current` and `Version 1` prototype versions
+
+These can be switched from the bottom-left controls in the app.
+
+## Deployment
+
+Live prototype:
+
+- [https://agent-behavior-prototype.vercel.app](https://agent-behavior-prototype.vercel.app)
+
+## Notes
+
+This is a product prototype, not production-ready code. The goal is to explore information architecture, interaction design, and product framing for behavior management in AI agents.
